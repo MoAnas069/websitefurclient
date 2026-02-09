@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import storyCraft from '../assets/craft-hands.png';
+const storyCraft = '/assets/craft-hands.png';
 
 const ProcessStep = ({ number, title, description, delay }) => (
     <motion.div

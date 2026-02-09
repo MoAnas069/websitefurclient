@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import storyCraft from '../assets/story-craft.jpg';
+const storyCraft = '/assets/story-craft.jpg';
 
 const BrandStory = () => {
     return (

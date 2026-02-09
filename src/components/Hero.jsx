@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import heroBg from '../assets/hero.jpg';
+const heroBg = '/assets/hero.jpg';
 
 const Hero = () => {
     return (

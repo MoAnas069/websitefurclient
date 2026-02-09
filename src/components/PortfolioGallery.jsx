@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import gallLiving from '../assets/gall-living.jpg';
-import gallDining from '../assets/gall-dining.jpg';
-import gallBed from '../assets/gall-bed.jpg';
-import gallTable from '../assets/gall-table.jpg';
-import gallOffice from '../assets/gall-office.jpg';
-import gallChair from '../assets/gall-chair.jpg';
+const gallLiving = '/assets/gall-living.jpg';
+const gallDining = '/assets/gall-dining.jpg';
+const gallBed = '/assets/gall-bed.jpg';
+const gallTable = '/assets/gall-table.jpg';
+const gallOffice = '/assets/gall-office.jpg';
+const gallChair = '/assets/gall-chair.jpg';
 
 const PortfolioGallery = () => {
     const [filter, setFilter] = useState('All');

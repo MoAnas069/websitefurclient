@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import featChair from '../assets/feat-chair-new.png';
-import featTable from '../assets/feat-table-new.png';
+const featChair = '/assets/feat-chair-new.png';
+const featTable = '/assets/feat-table-new.png';
 
 const FeaturedCollection = () => {
     // Unsplash IDs for luxury furniture

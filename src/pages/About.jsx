@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 // Using placeholders if specific about assets aren't downloaded yet. 
 // Can repurpose life-3 or similar.
-import aboutImg from '../assets/story-craft-new.png';
+const aboutImg = '/assets/story-craft-new.png';
 
 const About = () => {
     return (

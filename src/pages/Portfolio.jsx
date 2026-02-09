@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import gallDining from '../assets/gall-dining.jpg';
+const gallDining = '/assets/gall-dining.jpg';
 
-import gallTable from '../assets/gall-table.jpg';
-import gallOffice from '../assets/gall-office.jpg';
+const gallTable = '/assets/gall-table.jpg';
+const gallOffice = '/assets/gall-office.jpg';
 
 
-import accentSideChair from '../assets/accent side chair.png';
-import featChair from '../assets/feat-chair-new.png';
-import loungeChair from '../assets/lounge-chair.png';
-import oakConsole from '../assets/oak-console.png';
-import teakArmchair from '../assets/teak-armchair.png';
-import mahoganyCoffeeTable from '../assets/mahogany-coffee-table.png';
-import heritageBookshelf from '../assets/heritage-bookshelf.png';
-import rattanBedFrame from '../assets/rattan-bed-frame.png';
-import roundDiningTable from '../assets/round-dining-table.png';
-import writingDesk from '../assets/writing-desk.png';
-import walnutDresser from '../assets/walnut-dresser.png';
-import farmhouseDiningSet from '../assets/farmhouse-dining-set.png';
-import modernistStool from '../assets/modernist-stool.png';
-import executiveCredenza from '../assets/executive-credenza.png';
-import minimalistNightstand from '../assets/minimalist-nightstand.png';
+const accentSideChair = '/assets/accent side chair.png';
+const featChair = '/assets/feat-chair-new.png';
+const loungeChair = '/assets/lounge-chair.png';
+const oakConsole = '/assets/oak-console.png';
+const teakArmchair = '/assets/teak-armchair.png';
+const mahoganyCoffeeTable = '/assets/mahogany-coffee-table.png';
+const heritageBookshelf = '/assets/heritage-bookshelf.png';
+const rattanBedFrame = '/assets/rattan-bed-frame.png';
+const roundDiningTable = '/assets/round-dining-table.png';
+const writingDesk = '/assets/writing-desk.png';
+const walnutDresser = '/assets/walnut-dresser.png';
+const farmhouseDiningSet = '/assets/farmhouse-dining-set.png';
+const modernistStool = '/assets/modernist-stool.png';
+const executiveCredenza = '/assets/executive-credenza.png';
+const minimalistNightstand = '/assets/minimalist-nightstand.png';
 
 const Portfolio = () => {
     const [filter, setFilter] = useState('All');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
-import showroomImg from '../assets/gall-living.jpg';
+const showroomImg = '/assets/gall-living.jpg';
 
 const VisitShowroom = () => {
     return (

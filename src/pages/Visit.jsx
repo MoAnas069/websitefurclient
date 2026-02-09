@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import showroomImg from '../assets/feat-table.jpg';
+const showroomImg = '/assets/feat-table.jpg';
 
 const Visit = () => {
     return (

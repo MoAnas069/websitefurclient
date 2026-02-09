@@ -4,7 +4,7 @@ import FeaturedCollection from '../components/FeaturedCollection';
 import LifestyleShowcase from '../components/LifestyleShowcase';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import storyCraft from '../assets/story-craft-new.png';
+const storyCraft = '/assets/story-craft-new.png';
 
 const CraftsmanshipStrip = () => {
     return (

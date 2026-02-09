@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import life1 from '../assets/life-1.jpg';
-import life2 from '../assets/showroom.jpg';
-import life3 from '../assets/life-3.jpg';
+const life1 = '/assets/life-1.jpg';
+const life2 = '/assets/showroom.jpg';
+const life3 = '/assets/life-3.jpg';
 
 const LifestyleShowcase = () => {
     return (
