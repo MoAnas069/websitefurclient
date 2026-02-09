@@ -10,7 +10,11 @@ const CraftsmanshipStrip = () => {
     return (
         <section className="py-32 md:py-40 bg-brand-charcoal text-brand-ivory overflow-hidden relative">
             <div className="absolute inset-0 opacity-20 filter grayscale blur-[2px]">
-                <img src={storyCraft} className="w-full h-full object-cover" alt="Texture" />
+                <picture>
+                    <source srcSet={storyCraft.replace('.png', '.avif')} type="image/avif" />
+                    <source srcSet={storyCraft.replace('.png', '.webp')} type="image/webp" />
+                    <img src={storyCraft} className="w-full h-full object-cover" alt="Texture" width="1920" height="1080" loading="lazy" />
+                </picture>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">

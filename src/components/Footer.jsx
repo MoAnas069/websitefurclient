@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+
 
 const Footer = () => {
     return (
@@ -34,8 +35,7 @@ const Footer = () => {
                         <div>
                             <h4 className="font-bold uppercase tracking-[0.2em] mb-6 md:mb-8 text-brand-beige text-xs">Connect</h4>
                             <ul className="space-y-4 font-light text-brand-ivory/70 tracking-widest text-xs">
-                                <li><a href="#" className="hover:text-brand-ivory transition-colors duration-300">INSTAGRAM</a></li>
-                                <li><a href="#" className="hover:text-brand-ivory transition-colors duration-300">PINTEREST</a></li>
+                                <li><a href="https://instagram.com/meachery.furniture" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors duration-300">INSTAGRAM</a></li>
                                 <li><a href="mailto:hello@meacheryfurniture.com" className="hover:text-brand-ivory transition-colors duration-300">CONTACT</a></li>
                             </ul>
                         </div>
@@ -46,6 +46,15 @@ const Footer = () => {
                     <p className="text-[10px] uppercase tracking-widest text-brand-ivory/30 font-light text-center md:text-left">
                         © 2026 Meachery Furniture.
                     </p>
+                    <a
+                        href="https://www.instagram.com/intellex.web/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-brand-ivory/30 font-light hover:text-brand-ivory transition-colors duration-300 group"
+                    >
+                        <span>Meet the developers</span>
+                        <Instagram size={12} className="group-hover:text-brand-ivory transition-colors duration-300" />
+                    </a>
                 </div>
             </div>
         </footer>

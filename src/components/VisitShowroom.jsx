@@ -28,7 +28,7 @@ const VisitShowroom = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-serif text-brand-charcoal mb-2">Showroom Location</h4>
-                                    <p className="text-brand-charcoal/60 font-light">Panampilly Nagar Ave<br />Kochi, Kerala 682036</p>
+                                    <p className="text-brand-charcoal/60 font-light">SH58, Vallanghi<br />Palakkad, Kerala 678508</p>
                                 </div>
                             </div>
 
@@ -38,7 +38,7 @@ const VisitShowroom = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-serif text-brand-charcoal mb-2">Opening Hours</h4>
-                                    <p className="text-brand-charcoal/60 font-light">Mon - Fri: 10am - 7pm<br />Sat - Sun: 11am - 5pm</p>
+                                    <p className="text-brand-charcoal/60 font-light">All Days: 7:30am - 7:30pm</p>
                                 </div>
                             </div>
 
@@ -65,18 +65,14 @@ const VisitShowroom = () => {
                         transition={{ duration: 0.8 }}
                         className="h-[500px] bg-brand-beige/30 relative overflow-hidden"
                     >
-                        {/* Using an image as a "Map" visual or just a showroom shot because a real map is complex */}
-                        <img
-                            src={showroomImg}
-                            alt="Showroom Interior"
-                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div className="bg-white/90 p-6 shadow-xl text-center backdrop-blur-sm">
-                                <span className="font-serif text-xl tracking-wide text-brand-charcoal">MEACHERY</span>
-                                <p className="text-xs uppercase tracking-widest mt-2 text-brand-wood">Showroom</p>
-                            </div>
-                        </div>
+                        <iframe
+                            title="Meachery Furniture Location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.4735393086745!2d76.5818!3d10.5539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDMzJzE0LjAiTiA3NsKwMzQnNTQuNSJF!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin&q=Mechery+Furniture+Vallanghi+Palakkad"
+                            className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </motion.div>
                 </div>
             </div>

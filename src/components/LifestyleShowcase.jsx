@@ -16,11 +16,18 @@ const LifestyleShowcase = () => {
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6 h-auto md:h-[800px]">
                 {/* Large Left */}
                 <div className="md:col-span-8 h-[400px] md:h-full relative overflow-hidden group">
-                    <img
-                        src={life1}
-                        alt="Modern Living Room"
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    />
+                    <picture>
+                        <source srcSet={life1.replace('.jpg', '.avif')} type="image/avif" />
+                        <source srcSet={life1.replace('.jpg', '.webp')} type="image/webp" />
+                        <img
+                            src={life1}
+                            alt="Modern Living Room"
+                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                            loading="lazy"
+                            width="800"
+                            height="800"
+                        />
+                    </picture>
                     <div className="absolute bottom-6 left-6 text-white z-10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-sm font-light uppercase tracking-widest">The Plantation House</span>
                         <p className="font-serif italic">Munnar, Kerala</p>
@@ -30,22 +37,36 @@ const LifestyleShowcase = () => {
                 {/* Right Column Stack */}
                 <div className="md:col-span-4 flex flex-col gap-12 md:gap-6 h-full">
                     <div className="h-[300px] md:h-1/2 relative overflow-hidden group">
-                        <img
-                            src={life2}
-                            alt="Bedroom Detail"
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                        />
+                        <picture>
+                            <source srcSet={life2.replace('.jpg', '.avif')} type="image/avif" />
+                            <source srcSet={life2.replace('.jpg', '.webp')} type="image/webp" />
+                            <img
+                                src={life2}
+                                alt="Bedroom Detail"
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </picture>
                         <div className="absolute bottom-6 left-6 text-white z-10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                             <span className="text-sm font-light uppercase tracking-widest">Colonial Bungalow</span>
                             <p className="font-serif italic">Fort Kochi, Kerala</p>
                         </div>
                     </div>
                     <div className="h-[300px] md:h-1/2 relative overflow-hidden group">
-                        <img
-                            src={life3}
-                            alt="Dining Area"
-                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                        />
+                        <picture>
+                            <source srcSet={life3.replace('.jpg', '.avif')} type="image/avif" />
+                            <source srcSet={life3.replace('.jpg', '.webp')} type="image/webp" />
+                            <img
+                                src={life3}
+                                alt="Dining Area"
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                loading="lazy"
+                                width="400"
+                                height="400"
+                            />
+                        </picture>
                         <div className="absolute bottom-6 left-6 text-white z-10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                             <span className="text-sm font-light uppercase tracking-widest">Backwater Villa</span>
                             <p className="font-serif italic">Alappuzha, Kerala</p>

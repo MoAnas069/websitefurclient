@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import gallLiving from '../assets/gall-living.jpg';
+
 import gallDining from '../assets/gall-dining.jpg';
-import gallBed from '../assets/gall-bed.jpg';
+
 import gallTable from '../assets/gall-table.jpg';
 import gallOffice from '../assets/gall-office.jpg';
-import gallChair from '../assets/gall-chair.jpg';
-import featTable from '../assets/feat-table-new.png';
+
+
+import accentSideChair from '../assets/accent side chair.png';
 import featChair from '../assets/feat-chair-new.png';
 import loungeChair from '../assets/lounge-chair.png';
 import oakConsole from '../assets/oak-console.png';
+import teakArmchair from '../assets/teak-armchair.png';
+import mahoganyCoffeeTable from '../assets/mahogany-coffee-table.png';
+import heritageBookshelf from '../assets/heritage-bookshelf.png';
+import rattanBedFrame from '../assets/rattan-bed-frame.png';
+import roundDiningTable from '../assets/round-dining-table.png';
+import writingDesk from '../assets/writing-desk.png';
+import walnutDresser from '../assets/walnut-dresser.png';
+import farmhouseDiningSet from '../assets/farmhouse-dining-set.png';
+import modernistStool from '../assets/modernist-stool.png';
+import executiveCredenza from '../assets/executive-credenza.png';
+import minimalistNightstand from '../assets/minimalist-nightstand.png';
 
 const Portfolio = () => {
     const [filter, setFilter] = useState('All');
@@ -71,6 +83,102 @@ const Portfolio = () => {
             aspect: 'aspect-[3/4]',
             description: "Modern interpretation of the traditional Kerala resting chair."
         },
+        {
+            id: 7,
+            category: 'Living',
+            title: 'Teak Armchair',
+            image: teakArmchair,
+            aspect: 'aspect-[3/4]',
+            description: "Mid-century modern inspired teak armchair with ergonomic design."
+        },
+        {
+            id: 8,
+            category: 'Living',
+            title: 'Mahogany Coffee Table',
+            image: mahoganyCoffeeTable,
+            aspect: 'aspect-[4/3]',
+            description: "Low-profile mahogany table with a rich, dark finish."
+        },
+        {
+            id: 9,
+            category: 'Office',
+            title: 'Heritage Bookshelf',
+            image: heritageBookshelf,
+            aspect: 'aspect-[3/4]',
+            description: "Floor-to-ceiling wooden bookshelf with adjustable shelving."
+        },
+        {
+            id: 10,
+            category: 'Bedroom',
+            title: 'Rattan Bed Frame',
+            image: rattanBedFrame,
+            aspect: 'aspect-[16/9]',
+            description: "Hand-woven rattan headboard with a solid wood frame."
+        },
+        {
+            id: 11,
+            category: 'Dining',
+            title: 'Round Dining Table',
+            image: roundDiningTable,
+            aspect: 'aspect-[1/1]',
+            description: "Circular dining table perfect for intimate gatherings."
+        },
+        {
+            id: 12,
+            category: 'Office',
+            title: 'Writing Desk',
+            image: writingDesk,
+            aspect: 'aspect-[3/4]',
+            description: "Compact writing desk ideal for home offices."
+        },
+        {
+            id: 13,
+            category: 'Living',
+            title: 'Accent Side Chair',
+            image: accentSideChair,
+            aspect: 'aspect-[3/4]',
+            description: "Statement side chair with unique joinery details."
+        },
+        {
+            id: 14,
+            category: 'Bedroom',
+            title: 'Walnut Dresser',
+            image: walnutDresser,
+            aspect: 'aspect-[4/3]',
+            description: "Six-drawer walnut dresser with soft-close mechanisms."
+        },
+        {
+            id: 15,
+            category: 'Dining',
+            title: 'Farmhouse Dining Set',
+            image: farmhouseDiningSet,
+            aspect: 'aspect-[16/9]',
+            description: "Rustic farmhouse table with matching benches."
+        },
+        {
+            id: 16,
+            category: 'Living',
+            title: 'Modernist Stool',
+            image: modernistStool,
+            aspect: 'aspect-[3/4]',
+            description: "Versatile wooden stool that doubles as a side table."
+        },
+        {
+            id: 17,
+            category: 'Office',
+            title: 'Executive Credenza',
+            image: executiveCredenza,
+            aspect: 'aspect-[16/9]',
+            description: "Spacious credenza for executive office storage."
+        },
+        {
+            id: 18,
+            category: 'Bedroom',
+            title: 'Minimalist Nightstand',
+            image: minimalistNightstand,
+            aspect: 'aspect-[3/4]',
+            description: "Floating nightstand with integrated cable management."
+        }
     ];
 
     const filteredItems = filter === 'All' ? items : items.filter(item => item.category === filter);
@@ -124,11 +232,18 @@ const Portfolio = () => {
                                 onClick={() => setSelectedImage(item)}
                             >
                                 <div className={`relative overflow-hidden bg-brand-beige/20 mb-8 ${item.aspect}`}>
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
-                                    />
+                                    <picture>
+                                        <source srcSet={item.image.replace(/\.(png|jpg)$/, '.avif')} type="image/avif" />
+                                        <source srcSet={item.image.replace(/\.(png|jpg)$/, '.webp')} type="image/webp" />
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                                            loading="lazy"
+                                            width="500"
+                                            height="600"
+                                        />
+                                    </picture>
                                     {/* Mobile: Tap hint, Desktop: Hover overlay */}
                                     <div className="absolute inset-0 bg-brand-charcoal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                 </div>
@@ -155,12 +270,16 @@ const Portfolio = () => {
                             onClick={() => setSelectedImage(null)}
                             className="fixed inset-0 z-[60] bg-brand-ivory flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
                         >
-                            <motion.img
-                                layoutId={`image-${selectedImage.id}`}
-                                src={selectedImage.image}
-                                alt={selectedImage.title}
-                                className="max-w-full max-h-full object-contain shadow-2xl"
-                            />
+                            <picture>
+                                <source srcSet={selectedImage.image.replace(/\.(png|jpg)$/, '.avif')} type="image/avif" />
+                                <source srcSet={selectedImage.image.replace(/\.(png|jpg)$/, '.webp')} type="image/webp" />
+                                <motion.img
+                                    layoutId={`image-${selectedImage.id}`}
+                                    src={selectedImage.image}
+                                    alt={selectedImage.title}
+                                    className="max-w-full max-h-full object-contain shadow-2xl"
+                                />
+                            </picture>
                             <button className="absolute top-6 right-6 text-brand-charcoal">
                                 <span className="sr-only">Close</span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square" strokeLinejoin="miter">

@@ -9,11 +9,18 @@ const Hero = () => {
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={heroBg}
-                    alt="Luxury minimalist living room"
-                    className="w-full h-full object-cover"
-                />
+                <picture>
+                    <source srcSet={`${heroBg.replace('.jpg', '.avif')}`} type="image/avif" />
+                    <source srcSet={`${heroBg.replace('.jpg', '.webp')}`} type="image/webp" />
+                    <img
+                        src={heroBg}
+                        alt="Luxury minimalist living room"
+                        className="w-full h-full object-cover"
+                        width="1920"
+                        height="1080"
+                        fetchPriority="high" // Critical for LCP
+                    />
+                </picture>
                 {/* Darker Overlay for text visibility */}
                 <div className="absolute inset-0 bg-black/40" />
             </div>

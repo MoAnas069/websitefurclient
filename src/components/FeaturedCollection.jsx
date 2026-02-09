@@ -47,11 +47,18 @@ const FeaturedCollection = () => {
                             className={`group cursor-pointer ${index % 2 !== 0 ? 'md:mt-32' : ''}`}
                         >
                             <div className="overflow-hidden mb-8 relative bg-brand-beige/20 aspect-[4/5] w-full">
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                />
+                                <picture>
+                                    <source srcSet={item.image.replace(/\.(png|jpg)$/, '.avif')} type="image/avif" />
+                                    <source srcSet={item.image.replace(/\.(png|jpg)$/, '.webp')} type="image/webp" />
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                        loading="lazy"
+                                        width="600"
+                                        height="750"
+                                    />
+                                </picture>
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                             </div>
                             <div className="text-center md:text-left">

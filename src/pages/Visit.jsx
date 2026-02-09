@@ -28,10 +28,10 @@ const Visit = () => {
                     <div className="space-y-12">
                         <div>
                             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-wood mb-4 block">Location</span>
-                            <p className="text-2xl font-serif text-brand-charcoal mb-2">Kochi Flagship</p>
+                            <p className="text-2xl font-serif text-brand-charcoal mb-2">Palakkad Showroom</p>
                             <p className="text-brand-charcoal/60 font-light text-lg">
-                                Panampilly Nagar Ave<br />
-                                Kochi, Kerala 682036
+                                SH58, Vallanghi<br />
+                                Palakkad, Kerala 678508
                             </p>
                         </div>
 
@@ -47,16 +47,8 @@ const Visit = () => {
                         <div>
                             <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-wood mb-4 block">Hours</span>
                             <div className="flex justify-between border-b border-brand-charcoal/10 pb-4 mb-4">
-                                <span className="text-brand-charcoal font-serif">Monday - Friday</span>
-                                <span className="text-brand-charcoal/60 font-light">10:00 am — 7:00 pm</span>
-                            </div>
-                            <div className="flex justify-between border-b border-brand-charcoal/10 pb-4 mb-4">
-                                <span className="text-brand-charcoal font-serif">Saturday</span>
-                                <span className="text-brand-charcoal/60 font-light">11:00 am — 6:00 pm</span>
-                            </div>
-                            <div className="flex justify-between border-b border-brand-charcoal/10 pb-4 mb-4">
-                                <span className="text-brand-charcoal font-serif">Sunday</span>
-                                <span className="text-brand-charcoal/60 font-light">Closed</span>
+                                <span className="text-brand-charcoal font-serif">All Days</span>
+                                <span className="text-brand-charcoal/60 font-light">7:30 am — 7:30 pm</span>
                             </div>
                         </div>
 
@@ -67,9 +59,16 @@ const Visit = () => {
                 </div>
             </div>
 
-            {/* Map placeholder or simple texture */}
-            <div className="h-96 w-full bg-brand-beige/20 flex items-center justify-center">
-                <span className="text-brand-wood/40 font-serif text-2xl tracking-widest">[ MAP VIEW ]</span>
+            {/* Map View */}
+            <div className="h-96 w-full bg-brand-beige/20 flex items-center justify-center relative">
+                <iframe
+                    title="Meachery Furniture Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.4735393086745!2d76.5818!3d10.5539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDMzJzE0LjAiTiA3NsKwMzQnNTQuNSJF!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin&q=Mechery+Furniture+Vallanghi+Palakkad"
+                    className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
         </div>
     );

@@ -38,11 +38,18 @@ const Craftsmanship = () => {
 
                 {/* Visual Hero */}
                 <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden mb-32">
-                    <img
-                        src={storyCraft}
-                        alt="Craftsman working"
-                        className="w-full h-full object-cover"
-                    />
+                    <picture>
+                        <source srcSet={storyCraft.replace('.png', '.avif')} type="image/avif" />
+                        <source srcSet={storyCraft.replace('.png', '.webp')} type="image/webp" />
+                        <img
+                            src={storyCraft}
+                            alt="Craftsman working"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                            width="1200"
+                            height="800"
+                        />
+                    </picture>
                     <div className="absolute inset-0 bg-black/10" />
                 </div>
 
