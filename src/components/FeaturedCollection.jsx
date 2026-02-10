@@ -61,10 +61,10 @@ const FeaturedCollection = () => {
                                 </picture>
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                             </div>
-                            <div className="text-center md:text-left">
+                            <div className="text-right md:text-left">
                                 <span className="text-xs uppercase tracking-[0.15em] text-brand-gray mb-2 block">{item.category}</span>
-                                <h3 className="text-2xl font-serif text-brand-charcoal mb-2">{item.name}</h3>
-                                <div className="w-12 h-[1px] bg-brand-wood mb-4 mx-auto md:mx-0 opacity-50 group-hover:w-24 transition-all duration-300" />
+                                <h3 className="text-2xl font-serif text-brand-charcoal mb-2 whitespace-nowrap">{item.name}</h3>
+                                <div className="w-12 h-[1px] bg-brand-wood mb-4 ml-auto md:ml-0 opacity-50 group-hover:w-24 transition-all duration-300" />
                                 <p className="text-brand-charcoal/70 font-light">{item.description}</p>
                             </div>
                         </motion.div>

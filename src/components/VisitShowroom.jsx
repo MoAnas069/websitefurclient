@@ -51,7 +51,7 @@ const VisitShowroom = () => {
                                     <div className="flex flex-col">
                                         <a href="tel:9744491254" className="text-brand-charcoal/60 font-light hover:text-brand-wood transition-colors">9744491254</a>
                                         <a href="tel:7012234821" className="text-brand-charcoal/60 font-light hover:text-brand-wood transition-colors">7012234821</a>
-                                        <a href="mailto:hello@meacheryfurniture.com" className="text-brand-charcoal/60 font-light hover:text-brand-wood transition-colors mt-1">hello@meacheryfurniture.com</a>
+                                        <a href="mailto:meacherytradingcompany@gmail.com" className="text-brand-charcoal/60 font-light hover:text-brand-wood transition-colors mt-1">meacherytradingcompany@gmail.com</a>
                                     </div>
                                 </div>
                             </div>

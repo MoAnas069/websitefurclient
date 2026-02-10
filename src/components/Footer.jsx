@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
 
 
 const Footer = () => {
@@ -36,7 +36,8 @@ const Footer = () => {
                             <h4 className="font-bold uppercase tracking-[0.2em] mb-6 md:mb-8 text-brand-beige text-xs">Connect</h4>
                             <ul className="space-y-4 font-light text-brand-ivory/70 tracking-widest text-xs">
                                 <li><a href="https://instagram.com/meachery.furniture" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors duration-300">INSTAGRAM</a></li>
-                                <li><a href="mailto:hello@meacheryfurniture.com" className="hover:text-brand-ivory transition-colors duration-300">CONTACT</a></li>
+                                <li><a href="https://youtube.com/@meacherygroup6826?si=WQyODzvJzlfjHtpe" target="_blank" rel="noopener noreferrer" className="hover:text-brand-ivory transition-colors duration-300">YOUTUBE</a></li>
+                                <li><a href="mailto:meacherytradingcompany@gmail.com" className="hover:text-brand-ivory transition-colors duration-300">CONTACT</a></li>
                             </ul>
                         </div>
                     </div>

@@ -39,7 +39,7 @@ const Visit = () => {
                         <div className="flex flex-col gap-2">
                             <a href="tel:9744491254" className="text-brand-charcoal/60 font-light text-lg hover:text-brand-wood transition-colors">9744491254</a>
                             <a href="tel:7012234821" className="text-brand-charcoal/60 font-light text-lg hover:text-brand-wood transition-colors">7012234821</a>
-                            <a href="mailto:hello@meacheryfurniture.com" className="text-brand-charcoal/60 font-light text-lg hover:text-brand-wood transition-colors mt-2 block">hello@meacheryfurniture.com</a>
+                            <a href="mailto:meacherytradingcompany@gmail.com" className="text-brand-charcoal/60 font-light text-lg hover:text-brand-wood transition-colors mt-2 block">meacherytradingcompany@gmail.com</a>
                         </div>
                     </div>
 

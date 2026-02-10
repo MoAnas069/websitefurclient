@@ -192,11 +192,11 @@ const Portfolio = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="flex flex-col md:flex-row justify-between items-end mb-20 md:mb-32 gap-8"
+                    className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32 gap-8"
                 >
                     <div>
-                        <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-wood mb-6 block">Our Work</span>
-                        <h1 className="text-4xl md:text-7xl font-serif text-brand-charcoal leading-tight">Selected <br /> Works</h1>
+                        <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-wood mb-6 block">Glimpses of our work</span>
+                        <h1 className="text-4xl md:text-7xl font-serif text-brand-charcoal leading-tight whitespace-nowrap">Selected Works</h1>
                     </div>
 
                     {/* Mobile: Horizontal Scroll, Desktop: Wrap */}
