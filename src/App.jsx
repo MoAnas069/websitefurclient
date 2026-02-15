@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,27 +17,29 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
-    <Router>
-      <ErrorBoundary>
-        <ScrollToTop />
-        <div className="min-h-screen bg-brand-ivory text-brand-charcoal selection:bg-brand-wood selection:text-white flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Suspense fallback={<Loading />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/craftsmanship" element={<Craftsmanship />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/visit" element={<Visit />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </ErrorBoundary>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ErrorBoundary>
+          <ScrollToTop />
+          <div className="min-h-screen bg-brand-ivory text-brand-charcoal selection:bg-brand-wood selection:text-white flex flex-col">
+            <Navbar />
+            <main className="flex-grow">
+              <Suspense fallback={<Loading />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/craftsmanship" element={<Craftsmanship />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/visit" element={<Visit />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </ErrorBoundary>
+      </Router>
+    </HelmetProvider>
   );
 
 

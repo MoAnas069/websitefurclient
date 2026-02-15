@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 const showroomImg = '/assets/feat-table.jpg';
 
 const Visit = () => {
     return (
         <div className="min-h-screen bg-brand-ivory pt-32">
+            <SEO
+                title="Visit Us"
+                description="Plan your visit to the Meachery Furniture showroom in Palakkad, Kerala. Experience our handcrafted collection in person."
+                keywords="furniture showroom kerala, visit meachery furniture, furniture gallery palakkad, luxury furniture experience"
+                canonical="https://meachery.com/visit"
+            />
             {/* Full Width visual */}
             <div className="w-full h-[60vh] relative overflow-hidden">
                 <motion.img

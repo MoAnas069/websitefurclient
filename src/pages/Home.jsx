@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import FeaturedCollection from '../components/FeaturedCollection';
 import LifestyleShowcase from '../components/LifestyleShowcase';
@@ -80,6 +81,11 @@ const SoftVisit = () => {
 const Home = () => {
     return (
         <>
+            <SEO
+                description="Experience the finest handcrafted luxury furniture at Meachery. Timeless design, sustainable materials, and artisanal craftsmanship."
+                keywords="luxury furniture, handcrafted furniture, sustainable design, artisan furniture, kerala rosewood"
+                canonical="https://meachery.com/"
+            />
             <Hero />
             <FeaturedCollection />
             <CraftsmanshipStrip />

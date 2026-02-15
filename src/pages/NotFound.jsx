@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { LayoutGrid } from 'lucide-react';
 
 const NotFound = () => {
     return (
         <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-20 bg-brand-ivory relative overflow-hidden">
+            <SEO
+                title="Page Not Found"
+                description="The page you are looking for does not exist. Return to Meachery Furniture's homepage."
+                noIndex={true}
+            />
             {/* Background Elements */}
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-beige/20 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-wood/5 rounded-full blur-[120px] pointer-events-none" />

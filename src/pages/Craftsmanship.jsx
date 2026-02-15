@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 const storyCraft = '/assets/craft-hands.png';
 
 const ProcessStep = ({ number, title, description, delay }) => (
@@ -19,6 +20,12 @@ const ProcessStep = ({ number, title, description, delay }) => (
 const Craftsmanship = () => {
     return (
         <div className="bg-brand-ivory min-h-screen pt-40 pb-20">
+            <SEO
+                title="Our Process"
+                description="Discover the art of handcrafted furniture making. From consultation to creation, we use traditional techniques and sustainable materials."
+                keywords="handcrafted furniture process, custom furniture design, woodworking craftsmanship, sustainable furniture making"
+                canonical="https://meachery.com/craftsmanship"
+            />
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0 }}

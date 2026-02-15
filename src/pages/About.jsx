@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 // Using placeholders if specific about assets aren't downloaded yet. 
 // Can repurpose life-3 or similar.
 const aboutImg = '/assets/story-craft-new.png';
@@ -7,6 +8,12 @@ const aboutImg = '/assets/story-craft-new.png';
 const About = () => {
     return (
         <div className="min-h-screen bg-brand-ivory pt-32 pb-24">
+            <SEO
+                title="About Us"
+                description="Learn about the heritage of Meachery Furniture. Founded on quiet confidence, we create furniture that honors tradition and sustainable practices."
+                keywords="about meachery furniture, furniture heritage, sustainable luxury, kerala furniture makers"
+                canonical="https://meachery.com/about"
+            />
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section 1: Intro */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center mb-32">

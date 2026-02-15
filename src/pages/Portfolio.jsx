@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const gallDining = '/assets/gall-dining.jpg';
 
@@ -177,8 +178,19 @@ const Portfolio = () => {
             title: 'Minimalist Nightstand',
             image: minimalistNightstand,
             aspect: 'aspect-[3/4]',
-            description: "Floating nightstand with integrated cable management."
-        }
+        },
+        // Generated items for images 1-20
+        ...Array.from({ length: 20 }, (_, i) => {
+            const categories = ['Living', 'Dining', 'Bedroom', 'Office'];
+            return {
+                id: 19 + i,
+                category: categories[i % categories.length],
+                title: `Collection Piece ${i + 1}`,
+                image: `/${i + 1}.jpeg`,
+                aspect: i % 3 === 0 ? 'aspect-[4/3]' : 'aspect-[3/4]', // Varied aspect ratios
+                description: "Exquisite craftsmanship defined by timeless design and premium materials."
+            };
+        }).filter(item => item.id !== 19 + 3) // Remove image 4 (id 19+3 = 22)
     ];
 
     const filteredItems = filter === 'All' ? items : items.filter(item => item.category === filter);
@@ -187,6 +199,12 @@ const Portfolio = () => {
 
     return (
         <section className="pt-32 pb-32 bg-brand-ivory px-6 min-h-screen">
+            <SEO
+                title="Our Collection"
+                description="Explore our curated collection of luxury furniture. From living room statements to bedroom sanctuaries, find the perfect piece for your home."
+                keywords="furniture collection, luxury living room, dining tables, bedroom furniture, office furniture"
+                canonical="https://meachery.com/portfolio"
+            />
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
